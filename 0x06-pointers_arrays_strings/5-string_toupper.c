@@ -5,16 +5,16 @@
  *
  * Return: Pointer to the modified string
  */
-char *string_toupper(char *str)
+char *string_toupper(char *n)
 {
         int i = 0;
 
-        while (str[i] != '\0')
+        while (n[i] != '\0')
         {
-                if (str[i] >= 'a' && str[i] <= 'z')
-                        str[i] -= 32;
+                if (n[i] >= 'a' && n[i] <= 'z')
+                        n[i] -= 32;
                 i++;
         }
 
-        return (str);
+        return (n);
 }
