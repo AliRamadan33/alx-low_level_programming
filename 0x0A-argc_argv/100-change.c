@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <main.h>
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: 0 on success, 1 on error
- */
+  * main -  prints the minimum number of coins
+  * @argc: number of arguments
+  * @argv: arguments vector
+  *
+  * Return: 0-succes
+  */
 int main(int argc, char *argv[])
 {
 	int num, i, sum = 0;
