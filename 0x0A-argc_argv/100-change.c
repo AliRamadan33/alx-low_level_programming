@@ -9,55 +9,31 @@
  *
  * Return: 0 on success, 1 on error
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-    int cents, coins = 0;
+	int num, i, sum = 0;
+	int coins[] = {25, 10, 5, 2, 1};
 
-    if (argc != 2)
-    {
-        printf("Error\n");
-        return (1);
-    }
+	if (argc != 2)
+	{
+		printf("%s\n", "Error");
+		return (1);
+	}
 
-    cents = atoi(argv[1]);
-
-    if (cents < 0)
-        printf("0\n");
-
-    else
-    {
-        while (cents >= 25)
-        {
-            cents -= 25;
-            coins++;
-        }
-
-        while (cents >= 10)
-        {
-            cents -= 10;
-            coins++;
-        }
-
-        while (cents >= 5)
-        {
-            cents -= 5;
-            coins++;
-        }
-
-        while (cents >= 2)
-        {
-            cents -= 2;
-            coins++;
-        }
-
-        while (cents >= 1)
-        {
-            cents -= 1;
-            coins++;
-        }
-
-        printf("%d\n", coins);
-    }
-
-    return (0);
+	num = atoi(argv[1]);
+	if (n < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	for (i = 0; i < 5 && num >= 0; i++)
+	{
+		while (num >= coins[i])
+		{
+			num -= coins[i];
+			sum++;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
