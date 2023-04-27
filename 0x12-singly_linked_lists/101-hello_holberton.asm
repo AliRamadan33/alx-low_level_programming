@@ -1,14 +1,18 @@
+extern printf
 section .data
-    msg db "Hello, Holberton", 10, 0
-section .text
-    global _start
-_start:
-    ; call printf function
-    push msg
-    call printf
-    add esp, 4
+	msg: db "Hello, Holberton", 0
+	fmt: db "%s", 10, 0
 
-    ; exit program
-    mov eax, 1
-    xor ebx, ebx
-    int 0x80
+section .text
+	global main
+main:
+	push rbp
+	mov rdi,fmt
+	mov rsi,msg
+	mov rax,0
+	call printf
+
+	pop rbp
+	mov rax,0
+	ret
+
