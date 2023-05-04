@@ -18,4 +18,5 @@ void print_binary(unsigned long int n)
 	else
 	{
 		_putchar('0);
+	}
 }
