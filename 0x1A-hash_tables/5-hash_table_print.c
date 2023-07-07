@@ -1,4 +1,4 @@
-i#include "hash_tables.h"
+#include "hash_tables.h"
 
 /**
  * hash_table_print - function that prints a hash table
@@ -21,13 +21,13 @@ void hash_table_print(const hash_table_t *ht)
 
 	printf("{");
 	/* loop through indices of array for non-NULL */
-	while (j < ht->size)
+	while (i < ht->size)
 	{
-		if (array[j])
+		if (array[i])
 		{
 			/* valid pointer found */
 			print_comma_flag = 1;
-			seeker = array[j];
+			seeker = array[i];
 			while (seeker)
 			{
 				printf("'%s': ", seeker->key);
@@ -37,9 +37,9 @@ void hash_table_print(const hash_table_t *ht)
 				seeker = seeker->next;
 			}
 		}
-		if (array[j + 1] && print_comma_flag)
+		if (array[i + 1] && print_comma_flag)
 			printf(", ");
-		j++;
+		i++;
 	}
 	printf("}\n");
 }
